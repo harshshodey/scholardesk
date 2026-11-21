@@ -1,0 +1,10 @@
+/bin/
+/build/
+/exports/
+*.tmp
+*.bak
+*.lock
+/.env
+/.env.*
+*.log
+*.zip
