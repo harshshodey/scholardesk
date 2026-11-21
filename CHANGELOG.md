@@ -1,3 +1,10 @@
+# Version 1.2.1
+
+- Published the project as an MIT-licensed open-source repository, with contribution guidance and separate notices for literary excerpts.
+- Added Windows and Linux builds on GitHub Actions.
+- Corrected the Linux test setup so a record used by backup-failure checks is added on every platform.
+- Prevented Visual Studio from generating a second manifest when the Windows resource already embeds one.
+
 # Version 1.2
 
 - Added 12 brief, verified human-authored literary passages from eight authors, with original source links, locations and context.

@@ -136,9 +136,9 @@ int main() {
         rejects([&] { first.add(sample("FOURTH")); }, "active writer lock blocks competing save");
         check(first.all().size() == 1, "blocked writer leaves vector unchanged");
         CloseHandle(lock);
-        first.add(sample("FOURTH"));
-        check(first.all().size() == 2, "released writer lock allows retry");
 #endif
+        first.add(sample("FOURTH"));
+        check(first.all().size() == 2, "second save succeeds after any writer lock is released");
         const auto backupPath = fs::path(shared.string() + ".bak");
         fs::remove(backupPath); fs::create_directory(backupPath);
         const auto beforeBackupFailure = contents(shared);

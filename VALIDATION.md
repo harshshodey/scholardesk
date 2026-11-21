@@ -50,7 +50,7 @@ The desktop harness has a 30-second timeout per run. It writes its result to `bi
 
 ## Scope limits
 
-- The Windows builds were executed using the provided PowerShell scripts. CMake, Visual Studio, Linux and macOS builds were not run in this environment.
+- The original local validation used MinGW-w64 and the provided PowerShell scripts. The open-source publication additionally runs CMake with Visual Studio on Windows and GCC on Linux in GitHub Actions; current results are linked from the repository README. macOS has not been exercised.
 - Visual checks covered the available display configuration; automated layout checks covered three window sizes. Every possible monitor, DPI setting and accessibility tool was not exercised.
 - Writer locks coordinate ScholarDesk instances. Arbitrary editors that ignore those locks can still race with a save; external changes already present when saving are detected. Reload and retry is supported; automatic merging is not.
 - Power loss, a physically failing drive, full-disk conditions and very large datasets were not simulated.
